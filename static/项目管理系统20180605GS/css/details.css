@@ -1,0 +1,183 @@
+body{
+	background-color: #dfdfdf;
+}
+.main{
+	width: 1460px;
+	margin:0 auto;
+	overflow: hidden;
+	zoom: 1;
+}
+.main .img-detail{
+	padding:20px;
+	width: 1000px;
+	background-color: #fff;
+	float: left;
+}
+.main .img-detail .title{
+	font-size: 26px;
+	color:#555555;
+	text-align: center;
+}
+.main .img-detail .content{
+	margin-top:20px;
+	position: relative;
+}
+.main .img-detail .content .label{
+	position: absolute;
+	width: 130px;
+	left: -13px;
+	top:10px;
+}
+.main .img-detail .content .label li{
+	height:49px;
+	margin-bottom: 10px;
+	text-indent: 24px;
+	color:#fff;
+	line-height: 40px;
+    font-family: "FZGZHBJ";
+    font-size: 18px;
+}
+.main .img-detail .content .label1{
+	background: url(../images/label1.png) no-repeat center center;
+}
+.main .img-detail .content .label2{
+	background: url(../images/label2.png) no-repeat center center;
+}
+.main .img-detail .content .img-box img{
+	width: 100%;
+}
+.main .img-msg{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+}
+.main .img-msg .img-project{
+	padding:20px;
+	background-color: #fff;
+}
+.main .img-msg .img-project .content{
+	overflow: auto;
+	height: 330px;
+}
+.main .img-msg .img-project .content li{
+	float: left;
+	width: 98px;
+	border:1px solid #d7e6ff;
+	height: 78px;
+	margin:5px;
+	opacity: 0.4;
+	overflow: hidden;
+	cursor: pointer;
+}
+.main .img-msg .img-project .content li.active{
+	opacity: 1;
+}
+.main .img-msg .img-project .content li:hover{
+	border:1px solid #407feb;
+	opacity: 0.7;
+}
+.main .img-msg .img-project .btn{
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	border:1px solid #d8d8d8;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.main .img-msg .img-project .download-btn{
+	background-color: #f7f7f7;
+	color:#666666;
+}
+.main .img-msg .img-project .download-btn:hover{
+	background-color: #ffffff;
+}
+.main .img-msg .img-project .html-btn{
+	background-color: #2c6ddf;
+	color:#fff;
+}
+.main .img-msg .img-project .html-btn:hover{
+	background-color: #568ef1;
+}
+.main  .img-msg .img-information{
+	padding:20px;
+	margin-top: 20px;
+	background-color: #fff;
+}
+.main  .img-msg .img-information .infor{
+	border-bottom:1px solid #e9e9e9;
+	padding-bottom:10px;
+	margin-bottom: 10px;
+}
+.main  .img-msg .img-information .infor li{
+	height: 36px;
+	line-height: 36px;
+}
+.main  .img-msg .img-information .label .label-title{
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+}
+.main  .img-msg .img-information .label .label-content{
+	text-align: left;
+}
+.main  .img-msg .img-information .label .label-content span{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	padding:0 10px;
+	border:1px solid #e9e9e9;
+	margin:5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.main  .img-msg .img-information .label .label-content span:hover{
+	background-color: #2c6ddf;
+	color:#fff;
+}
+.main  .img-msg .img-information .btn-box span{
+	display: inline-block;
+	height: 36px;
+	width: 80px;
+	text-align: center;
+	line-height: 36px;
+	color:#fff;
+	border-radius: 18px;
+}
+.main  .img-msg .img-information .btn-box{
+	margin-top: 10px;
+	border-top:1px solid #e9e9e9;
+	padding-top: 10px;
+}
+.main  .img-msg .img-information .btn-box .download-btn{
+	background-color: #347dfd;
+}
+.main  .img-msg .img-information .btn-box .collection-btn{
+	background-color: #fe6161;
+}
+.main  .img-msg .img-information .btn-box .download-btn:hover{
+	background-color: #609aff;
+}
+.main  .img-msg .img-information .btn-box .collection-btn:hover{
+	background-color: #ff8080;
+}
+.main  .img-msg .img-information .btn-box span{
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

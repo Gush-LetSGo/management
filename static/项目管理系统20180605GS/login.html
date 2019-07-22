@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="resource/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+
+<title></title>
+<style>
+
+</style>
+</head>
+<body>
+<div class="left-bg">
+	<div class="logo"></div>
+</div>
+<div class="m-login">
+<form class="layui-form" action="">
+	<h1>欢迎登录</h1>
+	<div class="head"><img src="images/login/header.png"></div>
+	<div class="user">
+		<input type="text" name="">
+	</div>
+	<div class="password">
+		<input type="password" name="">
+		<i class="show-btn" id="show-btn"></i>
+	</div>
+	<div class="row">
+		<div class="gorget-btn">忘记密码</div>
+		<div class="rember-btn">
+			<input type="checkbox" name="" id="save" lay-skin="primary" title="记住密码">
+		</div>
+	</div>
+	<div class="login-btn" lay-submit="" lay-filter="login">登录</div>
+</form>
+</div>
+
+
+</body>
+<script src="resource/jquery/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="resource/layui/layui.js" type="text/javascript"></script>
+<script>
+layui.use(['form'], function(){
+	var form = layui.form;
+});
+
+
+$("#show-btn").click(function(){
+	var str=$(".password input").attr("type");
+	if(str=="text"){
+		$(".password input").attr("type","password");
+	}else{
+		$(".password input").attr("type","text");
+	}
+})
+
+
+</script>
+</html>

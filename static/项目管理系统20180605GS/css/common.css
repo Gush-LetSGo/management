@@ -1,0 +1,191 @@
+﻿@font-face {
+	font-family: "iconfont";
+    src: url('../resource/iconFont/iconfont.eot');
+    src: url('../resource/iconFont/iconfont.eot#iefix') format('embedded-opentype'),
+    url('../resource/iconFont/iconfont.woff') format('woff'),
+    url('../resource/iconFont/iconfont.ttf') format('truetype'),
+    url('../resource/iconFont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+@font-face {
+    font-family: "FZGZHBJ";
+    src: url('../resource/font/FZGZHBJ.eot');
+    src: url('../resource/font/FZGZHBJ.eot#iefix') format('embedded-opentype'),
+    url('../resource/font/FZGZHBJ.woff') format('woff'),
+    url('../resource/font/FZGZHBJ.ttf') format('truetype'),
+    url('../resource/font/FZGZHBJ.svg#FZGZHBJ') format('svg');
+}
+
+
+/********************************页面顶部***********************************/
+.top{
+    background-color: #2c6ddf;
+    color:#fff;
+}
+.top .logo{
+    float: left;
+    height: 80px;
+    padding-left: 60px;
+    margin-left: 30px;
+    font-size: 40px;
+    line-height: 76px;
+    background: url(../images/logo.png) no-repeat 0 center;
+}
+.top .operation{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.top .operation li{
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.top .operation li i{
+    margin-right: 7px;
+    font-size: 18px;
+}
+.top .operation li span{
+    vertical-align: middle;
+}
+
+
+
+
+
+
+.m-thumbnail{
+    position: relative;
+}
+.m-thumbnail:hover{
+    box-shadow: 0 0 18px rgba(0,0,0,0.6);
+}
+
+.m-thumbnail .img-box{
+    height: 220px;
+    overflow: hidden;
+    zoom: 1;
+}
+.m-thumbnail .img-box img{
+    width: 100%;
+}
+.m-thumbnail .thumbnail-title{
+    height: 45px;
+    line-height: 45px;
+    padding:0 10px;
+    overflow: hidden;
+    zoom:1;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.m-thumbnail .thumbnail-infor{
+    background-color: #fafafa;
+    border-top:1px solid #e8e8e8;
+    padding:5px 10px;
+}
+.m-thumbnail .thumbnail-infor li{
+    height: 26px;
+    line-height: 26px;
+    color:#666666;
+    font-size: 14px;
+    overflow: hidden;
+    zoom: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.m-thumbnail .thumbnail-infor li .icon{
+    color:#347dfd;
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+.m-thumbnail .thumbnail-operation{
+    text-align: center;
+    background-color: #fafafa;
+    border-top:1px solid #e8e8e8;
+    padding:10px 0;
+}
+.m-thumbnail .thumbnail-operation li{
+    display: inline-block;
+    width: 78px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    margin:0 5px;
+}
+.m-thumbnail .thumbnail-operation li.download-btn{
+    border:1px solid #02c478;
+    color:#02c478;
+}
+.m-thumbnail .thumbnail-operation li.delect-btn{
+    border:1px solid #347dfd;
+    color:#347dfd;
+}
+
+.m-thumbnail .thumbnail-operation li.download-btn:hover{
+    background-color: #02c478;
+    color:#fff;
+}
+.m-thumbnail .thumbnail-operation li.delect-btn:hover{
+    background-color: #347dfd;
+    color:#fff;
+}
+.m-thumbnail .btn-box{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+.m-thumbnail .btn-box li{
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 38px;
+    width: 80px;
+    height: 80px;
+    line-height: 76px;
+    background-color: #fff;
+    margin:0 auto;
+}
+.m-thumbnail .btn-box .collect{
+    color:#efce4a;
+    margin-top:80px;
+}
+.m-thumbnail .btn-box .collect:hover{
+    color:#fff;
+    background-color: #efce4a;
+}
+.m-thumbnail .btn-box .collect.active{
+    color:#fff;
+    background-color: #efce4a;
+}
+.m-thumbnail .btn-box .download{
+    color:#02c478;
+    margin-top:40px;
+}
+.m-thumbnail .btn-box .download:hover{
+    color:#fff;
+    background-color: #02c478;
+}
+
+
+
+
+
+
+
+

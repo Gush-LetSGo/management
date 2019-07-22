@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="resource/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/personal.css"/>
+<title></title>
+<style>
+</style>
+</head>
+<body>
+<div class="top clearfix">
+	<div class="logo">文件管理器</div>
+	<ul class="operation">
+		<li><i class="icon iconfont">&#xe606;</i>个人中心</li>
+		<li><i class="icon iconfont">&#xe60f;</i>退出</li>
+	</ul>
+</div>
+<div class="main">
+	<div class="title clearfix">
+		<div class="photo"><img src="images/photo.png"></div>
+		<ul class="infor">
+			<li class="name">香香</li>
+			<li>职位：管理员</li>
+			<li>邮箱：1025644578@qq.com</li>
+		</ul>
+		<ul class="operation">
+			<li class="upload-btn"><i class="icon iconfont">&#xe64a;</i>上传文件</li>
+			<li class="btn1">我的收藏</li>
+			<li class="btn2">我的下载</li>
+			<li class="btn2">我的上传</li>
+			<!-- <li class="btn3">已删除</li> -->
+		</ul>
+	</div>
+	<div class="content">
+		<ul class="clearfix">
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+			<li class="m-thumbnail">
+				<div class="img-box"><img src="images/thumbnail.png"></div>
+				<div class="thumbnail-title">常州市公安局民警因私出国境管理系统</div>
+				<ul class="thumbnail-operation">
+					<li class="download-btn"><i class="icon iconfont">&#xe738;</i>修改</li>
+					<li class="delect-btn"><i class="icon iconfont">&#xe61d;</i>删除</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="page-box" id="page-box"></div>
+	</div>
+</div>
+
+
+<script src="resource/jquery/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="resource/layui/layui.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//分页
+	layui.use(['laypage', 'layer'], function(){
+		var laypage = layui.laypage
+		,layer = layui.layer;
+		laypage.render({
+			elem: 'page-box'
+			,theme: '#2c6ddf'
+			,count: 100
+			,layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
+			,jump: function(obj){
+
+			}
+		});
+	})
+
+	$(".main .title .operation li").click(function(){
+		$(".main .title .operation li").removeClass("active");
+		$(this).addClass("active");
+	})
+
+
+
+	$(".m-thumbnail").mouseover(function(){
+		$(this).children(".btn-box").show();
+	})
+
+	$(".m-thumbnail").mouseleave(function(){
+		$(this).children(".btn-box").hide();
+	})
+
+	$(".m-thumbnail .btn-box .collect").click(function(){
+		if($(this).hasClass("active")){
+			$(this).removeClass("active");
+			layer.msg("已取消收藏");
+		}else{
+			$(this).addClass("active");
+			layer.msg("已收藏")
+		}
+	})
+})
+</script>
+</body>
+</html>

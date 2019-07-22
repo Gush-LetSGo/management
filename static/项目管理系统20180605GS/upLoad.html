@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="resource/layui/css/layui.css"/>
+<link rel="stylesheet" type="text/css" href="resource/webupload/webuploader.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/upLoad.css"/>
+<title></title>
+<style>
+</style>
+</head>
+<body>
+<div class="top clearfix">
+	<div class="logo">文件管理器</div>
+	<ul class="operation">
+		<li><i class="icon iconfont">&#xe606;</i>个人中心</li>
+		<li><i class="icon iconfont">&#xe60f;</i>退出</li>
+	</ul>
+</div>
+<div class="main">
+	<div class="title">
+		<h2><i class="icon iconfont">&#xe738;</i>完善信息</h2>
+	</div>
+	<div class="content">
+		<form class="layui-form" action="">
+
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">项目名称：</label></div>
+					<div class="layui-input-block"><input type="text" name="project_name" lay-verify="required" autocomplete="off" placeholder="请输入项目名称" class="layui-input"></div>
+				</div>
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">项目所在地：</label></div>
+					<div class="layui-input-block">
+						<div class="layui-input-inline">
+							<select name="provincial" lay-verify="required">
+								<option value="">请选择省</option>
+								<option value="浙江" content="">浙江省</option>
+								<option value="你的工号">江西省</option>
+								<option value="你最喜欢的老师">福建省</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="municipal" lay-verify="required">
+								<option value="">请选择市</option>
+								<option value="杭州">杭州</option>
+								<option value="宁波" disabled="">宁波</option>
+								<option value="温州">温州</option>
+								<option value="温州">台州</option>
+								<option value="温州">绍兴</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="county" lay-verify="required">
+								<option value="">请选择县/区</option>
+								<option value="西湖区">西湖区</option>
+								<option value="余杭区">余杭区</option>
+								<option value="拱墅区">临安市</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">负责人：</label></div>
+					<div class="layui-input-block"><input type="text" name="charge" lay-verify="required" autocomplete="off" placeholder="请输负责人" class="layui-input"></div>
+				</div>
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">交接人：</label></div>
+					<div class="layui-input-block"><input type="text" name="handover" lay-verify="required" autocomplete="off" placeholder="请输入标题" class="layui-input"></div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">设计师：</label></div>
+					<div class="layui-input-block"><input type="text" name="design" lay-verify="required" autocomplete="off" placeholder="请输设计师" class="layui-input"></div>
+				</div>
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">前端负责人：</label></div>
+					<div class="layui-input-block"><input type="text" name="head" lay-verify="required" autocomplete="off" placeholder="请输入标题" class="layui-input"></div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">色系：</label></div>
+					<div class="layui-input-block">
+						<select name="color" lay-verify="required">
+							<option value="">请选择色系</option>
+							<option value="西湖区">红</option>
+							<option value="余杭区">蓝</option>
+							<option value="拱墅区">绿</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">页面规格</label></div>
+					<div class="layui-input-block">
+						<select name="color" lay-verify="required">
+							<option value="">请选择页面规格</option>
+							<option value="西湖区">大屏页面</option>
+							<option value="余杭区">下拉长页面</option>
+							<option value="拱墅区">框架页面</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<div class="layui-input-block"><label class="layui-form-label">上传项目文件包：</label></div>
+					<div class="layui-input-block">
+						<div class="fileUploader clearfix" id="fileUploader">
+							<div class="btns">
+								<div id="filePicker">选择文件</div>
+							</div>
+							<div class="uploader-list file-list"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="m-tag">
+				<div class="title">
+					<h3>设置项目标签：</h3>
+				</div>
+				<div class="content">
+					<div class="custom">
+						<span class="add-btn"></span>
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="recommend">
+					<span tag-name="登录页">登录页</span>
+					<span tag-name="首页">首页</span>
+					<span tag-name="大数据可视化">大数据可视化</span>
+					<span tag-name="列表页">列表页</span>
+					<span tag-name="系统简介">系统简介</span>
+					<span tag-name="电子档案">电子档案</span>
+					<span tag-name="流程图">流程图</span>
+					<span tag-name="框架页面">框架页面</span>
+					<span tag-name="移动端">移动端</span>
+				</div>
+			</div>
+			<div class="m-upload" id="m-upload">
+				<span class="upload-title">上传图片</span>
+				<div id="uploader-demo" class="controls">
+					<div class="drag-area">
+						<p>拖拽图片到此区域进行上传</p>
+						<span class="filePicker">上传图片</span>
+					</div>
+					<div class="uploader-list fileList"></div>
+				</div>
+			</div>
+			<div class="layui-form-item submit-form-item">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
+
+<script src="resource/jquery/jquery-1.11.3.js" type="text/javascript"></script>
+<script src="resource/layui/layui.js" type="text/javascript"></script>
+<script src="resource/webupload/webuploader.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var form,layer,uploader;
+
+	layui.use(['form', 'layer'], function(){
+		form = layui.form;
+		layer = layui.layer;
+
+
+		//自定义验证规则
+		form.verify({
+			title: function(value){
+				if(value.length < 5){
+					return '标题至少得5个字符啊';
+				}
+			}
+			,pass: [/(.+){6,12}$/, '密码必须6到12位']
+			,content: function(value){
+				layedit.sync(editIndex);
+			}
+		});
+		//监听提交
+		form.on('submit(formDemo)', function(data){
+			//表格信息
+			console.log(data.field);
+
+			//上传项目文件
+            fileUploader.upload();
+			//上传图片
+			uploader.upload();
+		});
+
+	});
+
+	//标签添加
+	$(function(){
+		//点击添加推荐标签标签
+		$(".main").on("click",".m-tag .recommend span",function(){
+			var flag=true;
+			var html=$(this).html();
+			$(this).closest(".m-tag").find(".content").children("span").each(function(){
+				if($(this).find("small").html()==html){
+					layer.msg('标签已存在');
+					flag=false;
+					return;
+				}
+			})
+			if(flag){
+				$("<span><small>"+$(this).html()+"</small><i class='icon iconfont'>&#xe690;</i></span>").insertBefore($(this).closest(".m-tag").find(".content .custom"));
+			}
+		})
+
+		//删除已添加的标签
+		$(".main").on("click",".m-tag .content span .icon",function(){
+			var str=$(this).parent().find("small").html();
+			$(this).parent().remove();
+		})
+
+		//m-tag阻止事件冒泡
+		$(".main").on("click",".m-tag .custom",function(e){
+			e.stopPropagation();
+		})
+		//点击添加自定义标签
+		$(".main").on("click",".m-tag .custom .add-btn",function(){
+			$(this).hide();
+			$(this).parent().find("input").show();
+		})
+
+		$('.main').on('keypress','.m-tag .custom input',function(event){
+			if(event.keyCode == 13){
+				addCustomTag($(this));
+			}
+		});
+
+		//页面点击添加标签
+		$(document).click(function(){
+			$(".m-tag .custom").each(function(){
+				if($(this).find("input").val()!=""){
+					addCustomTag($(this).find("input"));
+				}else{
+					$(this).find("input").hide();
+					$(this).find(".add-btn").show();
+				}
+			})
+		})
+
+		//添加自定义标签方法
+		function addCustomTag(ele){
+			var flag=true;
+			var html=ele.val();
+			var len=ele.closest(".m-tag").find(".content").children("span").length;
+
+			if(html!=""){
+				for(var i=0; i<len; i++){
+					if(ele.closest(".m-tag").find(".content").children("span").eq(i).find("small").html()==html){
+						layer.msg('标签已存在');
+						flag=false;
+						return;
+					}
+				}
+				if(flag){
+					$("<span><small>"+ele.val()+"</small><i class='icon iconfont'>&#xe690;</i></span>").insertBefore(ele.closest(".m-tag").find(".content .custom"));
+				}
+				ele.val("");
+			}
+			ele.hide();
+			ele.parent().find(".add-btn").show();
+		}
+	})
+
+
+
+
+	//  图片webupload上传
+	$(function() {
+	    var $ = jQuery,
+	        $list = $('.fileList'),
+	        $dragArea = $('.drag-area'),
+	        $filePicker = $('.filePicker'), // 上传按钮
+	        $upimgmax = 50, // 支持上传最大个数
+	        // 优化retina, 在retina下这个值是2
+	        ratio = window.devicePixelRatio || 1,
+	        // 缩略图大小
+	        thumbnailWidth = 450,
+	        thumbnailHeight = 300;
+	        // 初始化Web Uploader
+        uploader = WebUploader.create({
+        	dnd: $dragArea,
+            // 自动上传。
+            auto: false,
+            // swf文件路径
+            swf: 'resource/webuploader/Uploader.swf',
+            // 文件接收服务端。
+            server: 'getImages.php',  //  这里是图片上传地址
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash
+            pick: {
+                id: $filePicker,
+                // multiple: false
+            },
+            duplicate: true,
+            fileSingleSizeLimit: 5242880, //  单个文件大小
+            fileNumLimit: $upimgmax, // 限制上传个数
+            accept: {
+                title: 'Images',
+                extensions: 'jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png' //修改这行
+            },
+            thumb: {//缩略图
+                width: 110,
+                height: 110,
+                // 图片质量，只有type为`image/jpeg`的时候才有效。
+                quality: 100,
+                // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
+                allowMagnify: false,
+                // 是否允许裁剪。
+                crop: true,
+                // 为空的话则保留原有图片格式。
+                // 否则强制转换成指定的类型。
+                // type: 'image/jpeg'
+            }
+        });
+	    // 当有文件添加进来的时候
+	    uploader.on('fileQueued', function(file) {
+	        var $li = $(
+	                '<div id="' + file.id + '" class="file-item thumbnail">' +
+		                '<div class="thumb"><img></div>' +
+
+		                '<div class="infor">'+
+		                	'<div class="set-title">'+
+			                	'<h3>设置图片标题：</h3>'+
+			                	'<input type="text" name="">'+
+		                	'</div>'+
+							'<div class="m-tag">'+
+								'<div class="title">'+
+									'<h3 class="">设置图片标签：</h3>'+
+								'</div>'+
+								'<div class="content">'+
+									'<div class="custom">'+
+										'<span class="add-btn"></span>'+
+										'<input type="text" name="">'+
+										// '<span class="confirm-btn"></span>'+
+									'</div>'+
+								'</div>'+
+								'<div class="recommend">'+
+									'<span tag-name="登录页">登录页</span>'+
+									'<span tag-name="首页">首页</span>'+
+									'<span tag-name="大数据可视化">大数据可视化</span>'+
+									'<span tag-name="列表页">列表页</span>'+
+									'<span tag-name="系统简介">系统简介</span>'+
+									'<span tag-name="电子档案">电子档案</span>'+
+									'<span tag-name="流程图">流程图</span>'+
+									'<span tag-name="框架页面">框架页面</span>'+
+									'<span tag-name="移动端">移动端</span>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+	                // '<div class="info">' + file.name + '</div>' +
+	                '<div class = "file-panel" style = "height: 30px;" >' +
+	                	'<span class = "cancel delimgbtns" title="删除"><i class="icon iconfont">&#xe690;</i></span></div>' +
+	                '</div>'
+	            ),
+	            $img = $li.find('img');
+	        $list.append($li);
+	        removefiles(file); //文件删除
+	        //创建缩略图
+	        uploader.makeThumb(file, function(error, src) {
+	            if (error) {
+	                $img.replaceWith('<span>不能预览</span>');
+	                return;
+	            }
+	            $img.attr('src', src);
+	        }, thumbnailWidth, thumbnailHeight);
+	        var uploadfilesNum = uploader.getStats().queueNum; //  共选中几个图片
+	        // 最多支持5张
+	        if ($('.file-item').length >= $upimgmax) {
+	            $filePicker.hide();
+	            if ($('.file-item').length >= ($upimgmax + 1)) {
+	                // 中断取消大于5张图片的对象
+	                uploader.removeFile(file, true);
+	                $('.file-item').last().remove();
+	            }
+	        } else {
+	            $filePicker.show();
+	        }
+	    });
+	    // 文件上传过程中创建进度条实时显示。
+	    uploader.on('uploadProgress', function(file, percentage) {
+	        var $li = $('#' + file.id),
+	            $percent = $li.find('.progress span');
+	        // 避免重复创建
+	        if (!$percent.length) {
+	            $percent = $('<p class="progress"><span></span></p>').appendTo($li).find('span');
+	        }
+	        $percent.css('width', percentage * 100 + '%');
+	    });
+	    // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+	    uploader.on('uploadSuccess', function(file, response) {
+	        var $li = $('#' + file.id),
+	            $img = $li.find('img'),
+	            $fileUrl = response.url, // 图片上传地址
+	            $filename = file.name, // 上传文件名称
+	            $filesize = (file.size / 1024).toFixed(2); // 上传文件尺寸大小 保留2位
+	        $li.append($('<span class="upload-success"><i class="icon iconfont">&#xe63b;</i>上传成功</span>'));
+	        $li.find('.progress span').css({"background-color":"#4cae4c"});
+
+	        // console.log('图片地址:' + $fileUrl);
+	        removehttpfiles();
+	    });
+
+	    // 文件上传失败，显示上传出错。
+	    uploader.on('uploadError', function(file) {
+	        var $li = $('#' + file.id),
+	            $error = $li.find('div.error');
+	        // 避免重复创建
+	        if (!$error.length) {
+	            $error = $('<div class="error"><i class="icon iconfont">&#xe614;</i>上传失败,请删除后重新上传</div>').appendTo($li);
+	        }
+	        $li.find('.progress span').css({"background-color":"red"});
+	    });
+	    // 完成上传
+	    uploader.on('uploadComplete', function(file) {
+
+	    });
+	    //上传失败
+	    uploader.on('error', function(handler) {
+	        if (handler == "Q_EXCEED_NUM_LIMIT") {
+	            layer.msg("最多只能上传 " + $upimgmax + "张图片");
+	        }
+	    });
+	    // 删除按钮事件
+	    function removefiles(file) {
+	        $('.delimgbtns').click(function() {
+	            // 中断 取消 传图
+	            uploader.removeFile(file, true);
+	            var spthisdiv = $(this).parent();
+	            spthisdiv.parent('.file-item').remove()
+	        });
+	    }
+	    // 删除服务器文件
+	    function removehttpfiles() {
+	        // 删除本条数据
+	        $('.delimgbtns').click(function() {
+	            var spthisdiv = $(this).parent();
+	            // 如果上传成功才执行
+	            var thisimgsrc = spthisdiv.siblings('img').attr('src');
+	            var geturl = "attach/deleteFlowFile";
+	            $.axpost(
+	                geturl, {
+	                    url: thisimgsrc,
+	                },
+	                //请求成功时处理
+	                function(data) {
+	                    layer.msg('删除成功');
+	                });
+	        });
+	    }
+	});
+
+
+	$(function(){
+	    fileUploader = WebUploader.create({
+	        // swf文件路径
+			swf: 'resource/webuploader/Uploader.swf',
+	        // 文件接收服务端。
+			server: 'getImages.php',  //  这里是上传地址
+	        // [默认值：'file']  设置文件上传域的name。
+	        fileVal:'upload',
+	        // 选择文件的按钮。可选。
+	        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+	        pick:
+	            {
+	                multiple: false,
+	                id: $('#filePicker'),
+	            },
+
+	        // 上传并发数。允许同时最大上传进程数[默认值：3]   即上传文件数
+	        threads: 1,
+	        // 自动上传修改为手动上传
+	        //auto: true,
+	        //是否要分片处理大文件上传。
+	        //chunked: true,
+	        // 如果要分片，分多大一片？ 默认大小为5M.
+	        //chunkSize: 5 * 1024 * 1024,
+	        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+	        //resize: false
+	    });
+
+	    //当有文件添加进来的时候
+	    fileUploader.on('fileQueued', function (file) {
+	    	$("#fileUploader .file-list").html("文件已添加");
+	        //具体逻辑根据项目需求来写  这里只是简单的举个例子写下
+	       // $one = $("<div >"+file.name+"</div>");
+	       // $("#img-list").append($one);
+	    });
+	    // 文件上传过程中创建进度条实时显示。
+	    fileUploader.on('uploadProgress', function (file, percentage) {
+	        // 具体逻辑...
+	    });
+	    // 文件上传成功处理。
+	    fileUploader.on('uploadSuccess', function (file, response) {
+	        // 具体逻辑...
+	    	$("#fileUploader .file-list").html("文件上传成功！");
+	    });
+	    // 文件上传失败处理。
+	    fileUploader.on('uploadError', function (file) {
+	        // 具体逻辑...
+	    	$("#fileUploader .file-list").html("文件上传失败！");
+	    });
+	    // 上传传完毕，不管成功失败都会调用该事件，主要用于关闭进度条
+	    fileUploader.on('uploadComplete', function (file) {
+	    	// console.log(file);
+	        // 具体逻辑...
+	    });
+
+	});
+
+
+
+})
+</script>
+</body>
+</html>

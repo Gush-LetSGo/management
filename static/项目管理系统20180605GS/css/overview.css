@@ -1,0 +1,75 @@
+
+body{
+	overflow: hidden;
+}
+
+/********************************列表页面***********************************/
+.main{
+	background-color: #edf6ff;
+	position: relative;
+}
+.main .left-menu{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 120px;
+	background-color: #fff;
+	height: 100%;
+	overflow: auto;
+}
+.main .left-menu::-webkit-scrollbar{width:0px;height:10px}
+.main .left-menu::-webkit-scrollbar-button{background-color:blue;height:0}
+.main .left-menu::-webkit-scrollbar-track{background:rgba(0,0,0,0.3);background:none}
+.main .left-menu::-webkit-scrollbar-track-piece{background:rgba(0,0,0,0.1)}
+.main .left-menu::-webkit-scrollbar-thumb{background:#e24115;border-radius:4px}
+.main .left-menu::-webkit-scrollbar-corner{background:blue}
+.main .left-menu::-webkit-scrollbar-resizer{background:blue}
+
+.main .right-list{
+	margin-left: 140px;
+	background-color: #fff;
+}
+
+.main .left-menu li{
+	padding:10px;
+	text-align: center;
+	color:#666666;
+	cursor: pointer;
+}
+.main .left-menu li:hover{
+	background-color: #b0dfff;
+	color:#fff;
+}
+.main .left-menu li.active{
+	background-color: #57baff;
+	color:#fff;
+}
+.main .left-menu li i{
+	font-size: 26px;
+}
+.main .left-menu li span{
+	display: block;
+	margin-top:8px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

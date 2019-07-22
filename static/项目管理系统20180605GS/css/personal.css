@@ -1,0 +1,109 @@
+body{
+	background-color: #f6f6f6;
+}
+.main{
+	width: 1200px;
+	margin:0 auto;
+}
+.main .title{
+	background-color: #fff;
+	margin-top: 50px;
+	padding:20px;
+	position: relative;
+	padding-left: 180px;
+}
+.main .title .photo{
+	position: absolute;
+	left: 16px;
+	top:-50px;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+	zoom: 1;
+	border:6px solid #fff;
+}
+.main .title .infor{
+	float: left;
+}
+.main .title .infor .name{
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.main .title .operation{
+	float: right;
+	margin-top: 25px;
+	margin-right: 20px;
+	overflow: hidden;
+	zoom:1;
+} 
+.main .title .operation li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	border-radius: 4px;
+	margin-left: 10px;
+	cursor: pointer;
+	border:1px solid #5392ff;
+	color:#5392ff;
+}
+.main .title .operation .upload-btn{
+	background-color: #ff6333;
+	color:#fff;
+	border:1px solid #ff6333;
+}
+.main .title .operation .upload-btn:hover{
+	background-color: #ff7c54;
+}
+.main .title .operation .btn1:hover,
+.main .title .operation .btn2:hover
+{
+	background-color: #5392ff;
+	color:#fff;
+}
+.main .title .operation .btn1.active,
+.main .title .operation .btn2.active
+{
+	background-color: #5392ff;
+	color:#fff;
+}
+.main .title .operation li.btn3{
+	border:1px solid #888888;
+	color:#888888;
+}
+.main .title .operation li.btn3:hover{
+	background-color: #888888;
+	color:#fff;
+}
+.main .title .operation li.btn3.active{
+	border:1px solid #888888;
+	background-color: #888888;
+	color:#fff;
+}
+
+
+
+
+
+.main .content{
+	background-color: #fff;
+	margin-top:10px;
+}
+
+.m-thumbnail{
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    float: left;
+    margin: 1%;
+    width: 23%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.main .page-box{
+	text-align: right;
+	padding-right: 20px;
+}

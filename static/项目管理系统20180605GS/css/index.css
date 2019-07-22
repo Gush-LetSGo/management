@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+}
+body{
+	background:url(../images/entrance_bg2.png) no-repeat bottom center;
+}
+/********************************入口页面***********************************/
+.entrance{
+	margin:200px auto 20px;
+	width: 700px;
+}
+.entrance li{
+	display: inline-block;
+	width: 280px;
+	height: 300px;
+	border-radius: 10px;
+	color:#71a5ff;
+	background-color: #fff;
+	border:1px solid #dce9ff;
+	box-shadow: 0 0 30px rgba(113,165,255,0.5);
+	cursor: pointer;
+    background:#fff url(../images/entrance_bg1.png) no-repeat center 195px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.entrance li:hover{
+	color:#fff;
+    background:#71a5ff url(../images/entrance_bg1_hover.png) no-repeat center 195px;
+}
+.entrance li:active{
+	color:#fff;
+    background:#91b9ff url(../images/entrance_bg1_hover.png) no-repeat center 195px;
+}
+.entrance li:first-child{
+	margin-right: 130px;
+}
+.entrance li i{
+	display: block;
+	font-size: 100px;
+	margin-top:60px;
+	text-align: center;
+}
+.entrance li span{
+	display: block;
+	text-align: center;
+	margin-top:56px;
+	font-size: 40px;
+    font-family: "FZGZHBJ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

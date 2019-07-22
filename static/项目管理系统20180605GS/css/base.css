@@ -1,0 +1,261 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: "Microsoft YaHei",'Helvetica Neue',Helvetica,sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{text-decoration: none;}
+
+
+
+
+/*
+Version: 1.0
+*/
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Margin
+ * 2.0 - position
+ * 3.0 - font
+ * 4.0 - tip
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 1.0 Margin
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+.mt5,.m5 { margin-top: 5px; }
+.ml5,.m5 { margin-left: 5px;}
+.mr5,.m5 { margin-right: 5px;}
+.mb5,.m5 { margin-bottom: 5px;}
+
+.mt10,.m10 { margin-top: 10px; }
+.ml10,.m10 { margin-left: 10px;}
+.mr10,.m10 { margin-right: 10px;}
+.mb10,.m10 { margin-bottom: 10px;}
+
+.mt20,.m20 { margin-top: 20px; }
+.ml20,.m20 { margin-left: 20px;}
+.mr20,.m20 { margin-right: 20px;}
+.mb20,.m20 { margin-bottom: 20px;}
+
+.mt30,.m30 { margin-top: 30px; }
+.ml30,.m30 { margin-left: 30px;}
+.mr30,.m30 { margin-right: 30px;}
+.mb30,.m30 { margin-bottom: 30px;}
+
+.mt40,.m40 { margin-top: 40px; }
+.ml40,.m40 { margin-left: 40px;}
+.mr40,.m40 { margin-right: 40px;}
+.mb40,.m40 { margin-bottom: 40px;}
+
+.mt60,.m60 { margin-top: 60px; }
+.ml60,.m60 { margin-left: 60px;}
+.mr60,.m60 { margin-right: 60px;}
+.mb60,.m60 { margin-bottom: 60px;}
+
+.mt80,.m80 { margin-top: 80px; }
+.ml80,.m80 { margin-left: 80px;}
+.mr80,.m80 { margin-right: 80px;}
+.mb80,.m80 { margin-bottom: 80px;}
+
+
+/**
+ * 2.0 position
+ *
+ * -----------------------------------------------------------------------------
+ */
+.hide{ display: none;}
+.oh{ overflow: hidden;}
+.oa{overflow: auto;}
+.o0{ opacity:0;filter: alpha(opacity = 0);}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.cb{ clear: both;}
+html .clearfix { *zoom: 1; } /*IE6 IE7 */
+
+
+/**
+ * 3.0 - font
+ *
+ * -----------------------------------------------------------------------------
+ */
+.ellipsis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.wba{word-break: break-all;}
+
+
+/**
+ * 4.0 - tip
+ *
+ * -----------------------------------------------------------------------------
+ */
+.alert-tip-box{
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.alert-tip{
+    width: 600px;
+    padding-bottom: 45px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid  #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    position: absolute;
+    top: 27.777777777778%;
+    left: 50%;
+    margin-left: -300px;
+    background: #fff;
+    
+}
+.alert-head{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.alert-tip-text{
+    font-size: 2.0em;
+    text-align: center;
+    padding: 50px;
+    padding-top: 30px;
+    line-height: 2;
+}
+.alert-btn{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.click-tip,.mouse-tip{
+    padding: 6px 20px;
+    background: url('/jxm-view/images/bg.6.png');
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    z-index: 99999;
+    top: 50px;
+    left: 500px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 14px;    
+}
+.mouse-tip{
+    font-size: 10px;
+    display: none;
+}
+.click-tip:after,
+.mouse-tip:after{
+    display: block;
+    content: '';
+    width: 0;
+    padding: 0;
+    border: 10px solid;
+    border-color: rgb(0,0,0) transparent transparent transparent;
+    border-color: rgba(0,0,0,.6) transparent transparent transparent; 
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -20px;
+}
+.click-tip:after{left: 30px;}
+.mouse-tip-red{background: #a67731;}
+.mouse-tip-red:after{border-color: #a67731 transparent transparent transparent;}
+.data-tip{
+    padding: 30px 100px;
+    top: 40%;
+    left: 50%;
+    max-width: 1000px;
+    font-size: 2.0em;
+    position: fixed;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 1.5;
+    z-index: 99999;
+    background: url('/jxm-view/images/bg.6.png');
+}
+.star,
+.star-em{
+    display: inline-block;
+    height: 15px;
+    width: 75px;
+    cursor: pointer;
+    position: relative;
+    background: url('/jxm-view/images/star.png') 0 -15px;
+}
+.star-em{
+    position: absolute;
+    background-position: 0 0;
+}
+
+
+/*
+ *浮动
+ */
+.fl{float: left;}
+.fr{float: right;}
+
+
+
+
+
+
+
