@@ -1,12 +1,4 @@
-﻿@font-face {
-	font-family: "iconfont";
-    src: url('../resource/iconFont/iconfont.eot');
-    src: url('../resource/iconFont/iconfont.eot#iefix') format('embedded-opentype'),
-    url('../resource/iconFont/iconfont.woff') format('woff'),
-    url('../resource/iconFont/iconfont.ttf') format('truetype'),
-    url('../resource/iconFont/iconfont.svg#iconfont') format('svg');
-}
-
+﻿
 .iconfont {
     font-family:"iconfont" !important;
     font-style:normal;
@@ -14,14 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
     vertical-align: middle;
 }
-@font-face {
-    font-family: "FZGZHBJ";
-    src: url('../resource/font/FZGZHBJ.eot');
-    src: url('../resource/font/FZGZHBJ.eot#iefix') format('embedded-opentype'),
-    url('../resource/font/FZGZHBJ.woff') format('woff'),
-    url('../resource/font/FZGZHBJ.ttf') format('truetype'),
-    url('../resource/font/FZGZHBJ.svg#FZGZHBJ') format('svg');
-}
+
 
 
 .row:after {
